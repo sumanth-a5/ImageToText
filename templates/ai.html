@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User Input Form</title>
+</head>
+<body>
+    <h2>Enter Your Data</h2>
+    <form method="POST">
+        {% csrf_token %}
+        <label for="user_input">Enter some text:</label>
+        <input type="text" id="user_input" name="user_input">
+        <button type="submit">Submit</button>
+    </form>
+    {{ data1 }}
+        {% if data1 %}
+            <h3>You entered:</h3>
+            <p>{{ data1 }}</p>
+        {% endif %}
+</body>
+</html>
